@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>[YOUR NAME] | Developer Portfolio</title>
+  <meta name="description" content="Portfolio of [YOUR NAME], a student and developer passionate about Python, web development, AI, and technology." />
+  <meta name="keywords" content="[YOUR NAME], developer portfolio, Python developer, web developer, student developer" />
+  <meta name="author" content="[YOUR NAME]" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="[YOUR NAME] | Developer Portfolio" />
+  <meta property="og:description" content="Portfolio of [YOUR NAME], a student and developer passionate about Python, web development, AI, and technology." />
+  <meta property="og:image" content="assets/images/profile.jpg" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- Loading screen -->
+  <div id="loading-screen" aria-hidden="true">
+    <div class="loader-mark">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </div>
+    <p class="loader-text">Loading</p>
+  </div>
+
+  <!-- Scroll progress bar -->
+  <div id="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-container">
+      <a href="#home" class="nav-logo">[YOUR NAME]</a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link" data-section="home">Home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#services" class="nav-link" data-section="services">Services</a></li>
+        <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+        <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+        <li><a href="#certificates" class="nav-link" data-section="certificates">Certificates</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">
+          <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+          <svg class="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <a href="assets/resume/resume.pdf" download class="btn btn-outline btn-sm nav-resume-btn">Resume</a>
+        <button id="hamburger" class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section id="home" class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="section-container hero-grid">
+        <div class="hero-text reveal">
+          <p class="hero-greeting">Hello, I'm</p>
+          <h1 class="hero-name">[YOUR NAME]</h1>
+          <div class="hero-role-wrap">
+            <span id="hero-role" class="hero-role">Student</span>
+          </div>
+          <p class="hero-desc">I'm a passionate developer who enjoys building useful, modern, and user-friendly applications. I love learning new technologies and turning ideas into real projects.</p>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View My Work
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="assets/resume/resume.pdf" download class="btn btn-outline">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              Download Resume
+            </a>
+          </div>
+
+          <div class="social-icons" id="hero-socials"></div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="hero-chip float-1"><span class="dot dot-teal"></span>Python</div>
+          <div class="hero-chip float-2"><span class="dot dot-cyan"></span>React</div>
+          <div class="hero-chip float-3"><span class="dot dot-teal"></span>Flask</div>
+          <div class="hero-chip float-4"><span class="dot dot-cyan"></span>Git</div>
+
+          <div class="hero-card glass">
+            <img src="assets/images/profile.jpg" alt="[YOUR NAME] profile photo" class="hero-photo" width="600" height="600" />
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </a>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about" class="section">
+      <div class="section-container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Get to know me</p>
+          <h2>About Me</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-image reveal">
+            <img src="assets/images/profile.jpg" alt="[YOUR NAME]" width="480" height="480" loading="lazy" />
+          </div>
+
+          <div class="about-content reveal">
+            <p class="about-intro">[Write 2-4 sentences about who you are, what you enjoy building, and what drives your curiosity as a developer.]</p>
+
+            <dl class="about-details">
+              <div class="about-detail"><dt>Location</dt><dd>[YOUR LOCATION]</dd></div>
+              <div class="about-detail"><dt>Education</dt><dd>[YOUR EDUCATION]</dd></div>
+              <div class="about-detail"><dt>Current Role</dt><dd>Student / Developer</dd></div>
+              <div class="about-detail"><dt>Interests</dt><dd>[YOUR INTERESTS]</dd></div>
+              <div class="about-detail"><dt>Goals</dt><dd>[YOUR GOALS]</dd></div>
+              <div class="about-detail"><dt>Email</dt><dd>[YOUR EMAIL]</dd></div>
+            </dl>
+
+            <a href="#education" class="btn btn-outline btn-sm">More About Me</a>
+          </div>
+        </div>
+
+        <div class="stats-grid" id="stats-grid">
+          <div class="stat-card reveal"><span class="stat-value" data-count="0">0</span><span class="stat-label">Projects</span></div>
+          <div class="stat-card reveal"><span class="stat-value" data-count="0">0</span><span class="stat-label">Certificates</span></div>
+          <div class="stat-card reveal"><span class="stat-value" data-count="0">0</span><span class="stat-label">Technologies</span></div>
+          <div class="stat-card reveal"><span class="stat-value" data-count="0">0</span><span class="stat-label">Achievements</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section id="skills" class="section section-alt">
+      <div class="section-container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">What I work with</p>
+          <h2>Skills</h2>
+          <p class="section-sub">Self-rated by comfort level — trim this list down to what actually applies to you.</p>
+        </div>
+        <div class="skills-grid" id="skills-grid"><!-- populated by main.js from SKILLS_DATA --></div>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section id="projects" class="section">
+      <div class="section-container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Selected work</p>
+          <h2>Projects</h2>
+        </div>
+
+        <div class="filter-bar reveal" id="filter-bar">
+          <button class="filter-btn active" data-filter="All">All</button>
+          <button class="filter-btn" data-filter="Web">Web</button>
+          <button class="filter-btn" data-filter="Python">Python</button>
+          <button class="filter-btn" data-filter="AI">AI</button>
+          <button class="filter-btn" data-filter="Other">Other</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid"><!-- populated by js/projects.js --></div>
+      </div>
+
+      <!-- Project details modal -->
+      <div class="modal-overlay" id="project-modal" aria-hidden="true">
+        <div class="modal glass" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+          <button class="modal-close" id="project-modal-close" aria-label="Close">&times;</button>
+          <h3 id="project-modal-title"></h3>
+          <p id="project-modal-desc" class="modal-text"></p>
+          <p id="project-modal-details" class="modal-text muted"></p>
+          <div id="project-modal-tech" class="chip-row"></div>
+          <div class="modal-actions">
+            <a id="project-modal-github" href="#" class="btn btn-outline btn-sm">GitHub</a>
+            <a id="project-modal-demo" href="#" class="btn btn-primary btn-sm">Live Demo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICES ===================== -->
+    <section id="services" class="section section-alt">
+      <div class="section-container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">How I can help</p>
+          <h2>Services</h2>
+        </div>
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <div class="service-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></div>
+            <h3>Web Development</h3><p>Building responsive and modern websites.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg></div>
+            <h3>Python Development</h3><p>Creating Python applications and automation tools.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line></svg></div>
+            <h3>UI Development</h3><p>Creating clean and user-friendly interfaces.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 7.2H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L7.6 13.6l-6-4.4h7.6z"></path></svg></div>
+            <h3>AI Projects</h3><p>Building useful AI-powered applications.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></div>
+            <h3>Automation</h3><p>Scripting repetitive tasks to save time and reduce errors.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 L3 14 h9 l-1 8 10-12h-9z"></path></svg></div>
+            <h3>Website Optimization</h3><p>Improving website performance and responsiveness.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section id="experience" class="section">
+      <div class="section-container narrow">
+        <div class="section-heading reveal">
+          <p class="eyebrow">The road so far</p>
+          <h2 id="experience-title">My Learning Journey</h2>
+        </div>
+        <!--
+          No professional work history yet, so this is shown as a learning
+          timeline instead of invented jobs. To switch to a real work-experience
+          timeline: change #experience-title text and edit the .timeline-item
+          blocks below with [ROLE] / [COMPANY] / [DATE] / [DESCRIPTION].
+        -->
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <span class="timeline-dot"></span>
+            <div class="timeline-card">
+              <p class="timeline-date">[DATE]</p>
+              <h3>[Milestone — e.g. Started learning Python]</h3>
+              <p class="timeline-org">[Where / how]</p>
+              <p class="timeline-desc">[What you learned or built]</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <span class="timeline-dot"></span>
+            <div class="timeline-card">
+              <p class="timeline-date">[DATE]</p>
+              <h3>[Milestone — e.g. Built first web project]</h3>
+              <p class="timeline-org">[Where / how]</p>
+              <p class="timeline-desc">[What you learned or built]</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <span class="timeline-dot"></span>
+            <div class="timeline-card">
+              <p class="timeline-date">[DATE]</p>
+              <h3>[Milestone — e.g. Started exploring AI/ML]</h3>
+              <p class="timeline-org">[Where / how]</p>
+              <p class="timeline-desc">[What you learned or built]</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EDUCATION ===================== -->
+    <section id="education" class="section section-alt">
+      <div class="section-container narrow">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Academic background</p>
+          <h2>Education</h2>
+        </div>
+        <div class="education-card reveal">
+          <div class="education-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 10 12 5 2 10l10 5 10-5Z"></path><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"></path></svg>
+          </div>
+          <div>
+            <h3>[INSTITUTION NAME]</h3>
+            <p class="education-meta">[DEGREE / CLASS] · [START YEAR - END YEAR]</p>
+            <p class="education-desc">[DESCRIPTION]</p>
+          </div>
+        </div>
+        <div class="education-columns">
+          <div class="reveal">
+            <p class="col-label">Courses</p>
+            <ul><li>[Course 1]</li><li>[Course 2]</li><li>[Course 3]</li></ul>
+          </div>
+          <div class="reveal">
+            <p class="col-label">Certifications</p>
+            <ul><li>[Certification 1]</li><li>[Certification 2]</li></ul>
+          </div>
+          <div class="reveal">
+            <p class="col-label">Achievements</p>
+            <ul><li>[Achievement 1]</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CERTIFICATES ===================== -->
+    <section id="certificates" class="section">
+      <div class="section-container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Proof of work</p>
+          <h2>Certificates</h2>
+        </div>
+        <div class="certificates-grid" id="certificates-grid">
+          <!-- Duplicate this block for each certificate -->
+          <div class="cert-card reveal" data-name="[Certificate Name]" data-issuer="[Issuing Organization]" data-date="[Date]">
+            <div class="cert-thumb"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"></path><path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5"></path></svg></div>
+            <h3>[Certificate Name]</h3>
+            <p class="cert-meta">[Issuing Organization] · [Date]</p>
+            <button class="btn btn-outline btn-sm cert-view-btn">View Certificate</button>
+          </div>
+          <div class="cert-card reveal" data-name="[Certificate Name]" data-issuer="[Issuing Organization]" data-date="[Date]">
+            <div class="cert-thumb"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"></path><path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5"></path></svg></div>
+            <h3>[Certificate Name]</h3>
+            <p class="cert-meta">[Issuing Organization] · [Date]</p>
+            <button class="btn btn-outline btn-sm cert-view-btn">View Certificate</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-overlay" id="cert-modal" aria-hidden="true">
+        <div class="modal glass modal-sm" role="dialog" aria-modal="true" aria-labelledby="cert-modal-title">
+          <button class="modal-close" id="cert-modal-close" aria-label="Close">&times;</button>
+          <h3 id="cert-modal-title"></h3>
+          <div class="cert-modal-thumb"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"></path><path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5"></path></svg></div>
+          <p id="cert-modal-meta" class="modal-text muted"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ACHIEVEMENTS ===================== -->
+    <section id="achievements" class="section section-alt">
+      <div class="section-container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Milestones</p>
+          <h2>Achievements</h2>
+        </div>
+        <div class="achievements-grid">
+          <div class="achievement-card reveal">
+            <div class="achievement-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4Z"></path><path d="M5 4H3v2a4 4 0 0 0 4 4M19 4h2v2a4 4 0 0 1-4 4"></path></svg></div>
+            <div><p class="achievement-cat">Competition</p><p>[Coding competition placement]</p></div>
+          </div>
+          <div class="achievement-card reveal">
+            <div class="achievement-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4Z"></path><path d="M5 4H3v2a4 4 0 0 0 4 4M19 4h2v2a4 4 0 0 1-4 4"></path></svg></div>
+            <div><p class="achievement-cat">Hackathon</p><p>[Hackathon participation / result]</p></div>
+          </div>
+          <div class="achievement-card reveal">
+            <div class="achievement-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4Z"></path><path d="M5 4H3v2a4 4 0 0 0 4 4M19 4h2v2a4 4 0 0 1-4 4"></path></svg></div>
+            <div><p class="achievement-cat">Academic</p><p>[Academic achievement]</p></div>
+          </div>
+          <div class="achievement-card reveal">
+            <div class="achievement-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4Z"></path><path d="M5 4H3v2a4 4 0 0 0 4 4M19 4h2v2a4 4 0 0 1-4 4"></path></svg></div>
+            <div><p class="achievement-cat">Open Source</p><p>[Open-source contribution]</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== GITHUB ===================== -->
+    <section id="github" class="section">
+      <div class="section-container narrow">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Open source</p>
+          <h2>GitHub</h2>
+          <p class="section-sub">Set <code>GITHUB_USERNAME</code> in <code>js/main.js</code> to pull this live — otherwise these stay as editable placeholders.</p>
+        </div>
+        <div class="github-card reveal">
+          <div class="github-header">
+            <div class="github-avatar"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.3-3.2-.1-.3-.6-1.5.1-3.2 0 0 1-.3 3.4 1.3a11.7 11.7 0 0 1 6.2 0c2.4-1.6 3.4-1.3 3.4-1.3.7 1.7.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3Z"></path></svg></div>
+            <div><p class="github-username" id="github-username">@[your-github-username]</p><p class="github-sub">GitHub profile</p></div>
+          </div>
+          <div class="github-stats">
+            <div><span id="github-repos">0</span><p>Repositories</p></div>
+            <div><span id="github-followers">0</span><p>Followers</p></div>
+            <div><span id="github-following">0</span><p>Following</p></div>
+          </div>
+          <a href="https://github.com/[YOUR GITHUB]" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View GitHub Profile</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RESUME ===================== -->
+    <section id="resume" class="section section-alt">
+      <div class="section-container narrow">
+        <div class="resume-cta reveal">
+          <h2>Want to know more about my experience?</h2>
+          <p>My full background, skills, and project history are in one document.</p>
+          <a href="assets/resume/resume.pdf" download class="btn btn-primary">Download Resume</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contact" class="section">
+      <div class="section-container contact-grid">
+        <div class="reveal">
+          <p class="eyebrow">Get in touch</p>
+          <h2>Let's Work Together</h2>
+          <p class="contact-intro">Have a project in mind or just want to say hello? My inbox is open.</p>
+          <ul class="contact-info">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4z"></path><path d="m4 6 8 7 8-7"></path></svg>[YOUR EMAIL]</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>[YOUR LOCATION]</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.3-3.2-.1-.3-.6-1.5.1-3.2 0 0 1-.3 3.4 1.3a11.7 11.7 0 0 1 6.2 0c2.4-1.6 3.4-1.3 3.4-1.3.7 1.7.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3Z"></path></svg>github.com/[YOUR GITHUB]</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2ZM8 19H5v-9h3ZM6.5 8.7A1.7 1.7 0 1 1 8.2 7a1.7 1.7 0 0 1-1.7 1.7ZM19 19h-3v-4.6c0-1.1 0-2.5-1.5-2.5s-1.8 1.2-1.8 2.4V19h-3v-9h2.9v1.3a3.1 3.1 0 0 1 2.8-1.5c3 0 3.6 2 3.6 4.5Z"></path></svg>linkedin.com/in/[YOUR LINKEDIN]</li>
+          </ul>
+        </div>
+
+        <form id="contact-form" class="contact-form reveal" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cf-name">Name</label>
+              <input type="text" id="cf-name" name="name" />
+              <span class="form-error" id="err-name"></span>
+            </div>
+            <div class="form-group">
+              <label for="cf-email">Email</label>
+              <input type="email" id="cf-email" name="email" />
+              <span class="form-error" id="err-email"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cf-subject">Subject</label>
+            <input type="text" id="cf-subject" name="subject" />
+            <span class="form-error" id="err-subject"></span>
+          </div>
+          <div class="form-group">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" rows="5"></textarea>
+            <span class="form-error" id="err-message"></span>
+          </div>
+          <!--
+            No backend or email service is connected yet. Wire this form up to
+            Formspree, EmailJS, or your own API endpoint inside js/main.js
+            (see the handleContactSubmit function) — never put API keys here
+            in the frontend code.
+          -->
+          <button type="submit" class="btn btn-primary form-submit">Send Message</button>
+          <p id="form-status" class="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="section-container footer-grid">
+      <div>
+        <p class="footer-name">[YOUR NAME]</p>
+        <p class="footer-tagline">Building ideas into real-world projects.</p>
+        <div class="social-icons" id="footer-socials"></div>
+      </div>
+      <div>
+        <p class="col-label">Navigate</p>
+        <nav class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#services">Services</a>
+          <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-back">
+        <button id="back-to-top-footer" class="btn btn-outline btn-sm">Back to Top</button>
+      </div>
+    </div>
+    <p class="footer-copy">© 2026 [YOUR NAME]. All rights reserved.</p>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+  </button>
+
+  <script src="js/projects.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
